@@ -14,7 +14,8 @@ namespace OpenWeather.Weather_Latest.Data_Handling
 
     public class weathers
     {
-        public List<weathers> weather { get; set; }
+        
+        public int id { get; set; }
 
 
     }

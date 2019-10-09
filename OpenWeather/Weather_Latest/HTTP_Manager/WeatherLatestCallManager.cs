@@ -11,6 +11,7 @@ namespace OpenWeather.Weather_Latest.HTTP_Manager
    public class WeatherLatestCallManager
     {
         readonly IRestClient restClient;
+        public IRestResponse iresponse;
         public WeatherLatestCallManager()
         {
             restClient = new RestClient(WeatherConfig.BaseUrl);
@@ -20,7 +21,7 @@ namespace OpenWeather.Weather_Latest.HTTP_Manager
         {
             var request = new RestRequest(WeatherConfig.ApiUrlMod + "&" + WeatherConfig.ApiKey);
             var response = restClient.Execute(request, Method.GET);
-
+            iresponse = response;
             return response.Content;
 
         }
