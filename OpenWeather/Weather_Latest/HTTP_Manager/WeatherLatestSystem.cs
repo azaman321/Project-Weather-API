@@ -9,7 +9,16 @@ using OpenWeather.Weather_Latest.Data_Handling;
 
 namespace OpenWeather.Weather_Latest.HTTP_Manager
 {
-    class WeatherLatestSystem
+   public class WeatherLatestSystem
     {
+        public WeatherLatestDTO weatherLatestDTO = new WeatherLatestDTO();
+
+        public WeatherLatestCallManager callManager = new WeatherLatestCallManager();
+
+        public JObject LatestWeatherJson;
+        public WeatherLatestSystem()
+        {
+            weatherLatestDTO.DeserializeLatestWeather(callManager.GetLatestWeather());
+        }
     }
 }
