@@ -54,6 +54,7 @@ namespace OpenWeather.Weather_Latest.Data_Handling
         public double visibility { get; set; }
         public string dt { get; set; }
         public Wind wind { get; set; }
+        public string @base { get; set; }
     }
         
 }

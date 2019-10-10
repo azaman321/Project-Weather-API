@@ -195,6 +195,8 @@ namespace OpenWeather.Tests
 
 
 
+
+
         [Test()]
         public void VisibilityType()
         {
@@ -219,6 +221,12 @@ namespace OpenWeather.Tests
 
         }
 
+        [Test()]
+        public void BaseString()
+        {
+
+            Assert.AreEqual("stations", WeatherLatest.weatherLatestDTO.LatestWeatherRoot.@base);
+        }
 
 
 
