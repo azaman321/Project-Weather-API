@@ -17,6 +17,7 @@ namespace OpenWeather.Tests
         [Test()]
         public void LonDataType()
         {
+            
             Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lon);
           //  Assert.AreEqual(53.35", WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lat);
         }
@@ -227,6 +228,20 @@ namespace OpenWeather.Tests
 
             Assert.AreEqual("stations", WeatherLatest.weatherLatestDTO.LatestWeatherRoot.@base);
         }
+
+        [Test()]
+        public void BaseLength()
+        {
+
+            Assert.AreEqual(8, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.@base.Length);
+        }
+
+        [Test()]
+        public void BaseType()
+        {
+            Assert.IsInstanceOf<string>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.@base);
+        }
+
 
 
 
