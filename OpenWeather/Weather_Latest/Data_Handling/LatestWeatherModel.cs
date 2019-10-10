@@ -12,7 +12,7 @@ namespace OpenWeather.Weather_Latest.Data_Handling
         public double lat { get; set; }
     }
 
-    public class weathers
+    public class Weathers
     {
 
         public int id { get; set; }
@@ -23,21 +23,37 @@ namespace OpenWeather.Weather_Latest.Data_Handling
 
     }
 
-    public class mains
+    public class Mains
     {
         public double temp { get; set; }
         public double pressure { get; set; }
         public double humidity { get; set; }
-        public double temtemp_min { get; set; }
-        public double temtemp_max { get; set; }
+        public double temp_min { get; set; }
+        public double temp_max { get; set; }
+        
 
+    }
+
+    public class Wind
+    {
+        public double speed { get; set; }
+        public double deg { get; set; }
+    }
+
+    public class Clouds
+    {
+        public double all { get; set; }
     }
         public class LatestWeatherRoot
     {
+        
         public LatestWeatherModel coord { get; set; }
-        public IList<weathers> weather { get; set; }
+        public IList<Weathers> weather { get; set; }
 
-        public mains main { get; set; }
+        public Mains main { get; set; }
+        public double visibility { get; set; }
+        public string dt { get; set; }
+        public Wind wind { get; set; }
     }
         
 }

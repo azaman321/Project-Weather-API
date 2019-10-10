@@ -15,14 +15,14 @@ namespace OpenWeather.Tests
         public WeatherLatestCallManager CM = new WeatherLatestCallManager();
 
         [Test()]
-        public void lonDataType()
+        public void LonDataType()
         {
             Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lon);
           //  Assert.AreEqual(53.35", WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lat);
         }
 
         [Test()]
-        public void lonDataValue()
+        public void LonDataValue()
         {
             
               Assert.AreEqual(-6.26, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lon);
@@ -31,13 +31,13 @@ namespace OpenWeather.Tests
 
 
         [Test()]
-        public void latDataType()
+        public void LatDataType()
         {
             Assert.IsNotInstanceOf<string>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lat);
         }
 
         [Test()]
-        public void latDataValue()
+        public void LatDataValue()
         {
 
             Assert.AreEqual(53.35, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.coord.lat);
@@ -46,13 +46,13 @@ namespace OpenWeather.Tests
       
 
         [Test()]
-        public void idDataType()
+        public void IdDataType()
         {
             Assert.IsInstanceOf<int>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].id);
         }
 
         [Test()]
-        public void mainstringLength()
+        public void MainstringLength()
         {
             Assert.IsTrue( WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].main.Length>0);
         }
@@ -60,14 +60,14 @@ namespace OpenWeather.Tests
        
 
         [Test()]
-        public void mainType()
+        public void MainType()
         {
             Assert.IsInstanceOf<string>( WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].main);
 
         }
 
         [Test()]
-        public void descriptionstringLength()
+        public void DescriptionstringLength()
         {
             Assert.IsTrue( (WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].description.Length)>0);
         }
@@ -77,14 +77,14 @@ namespace OpenWeather.Tests
     
 
         [Test()]
-        public void descriptionType()
+        public void DescriptionType()
         {
             Assert.IsInstanceOf<string>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].description);
 
         }
 
         [Test()]
-        public void iconstringLength()
+        public void IconstringLength()
         {
             Assert.IsTrue((WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].icon.Length) > 0);
         }
@@ -94,9 +94,128 @@ namespace OpenWeather.Tests
 
 
         [Test()]
-        public void iconType()
+        public void IconType()
         {
             Assert.IsInstanceOf<string>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.weather[0].icon);
+
+        }
+
+        [Test()]
+        public void TempValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp);
+        }
+
+
+
+
+
+        [Test()]
+        public void TempType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp);
+
+        }
+
+           [Test()]
+        public void PressureValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.pressure);
+        }
+
+
+
+
+
+        [Test()]
+        public void PressureType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.pressure);
+
+        }
+
+        [Test()]
+        public void HumidityValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.humidity);
+        }
+
+
+
+
+
+        [Test()]
+        public void HumidityType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.humidity);
+
+        }
+
+        [Test()]
+        public void TempMinValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp_min);
+        }
+
+
+
+
+
+        [Test()]
+        public void TempMinType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp_min);
+
+        }
+
+        [Test()]
+        public void TempMaxValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp_max);
+        }
+
+
+
+
+
+        [Test()]
+        public void TempMaxType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.main.temp_max);
+
+        }
+
+        [Test()]
+        public void VisibilityValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.visibility);
+        }
+
+
+
+
+
+        [Test()]
+        public void VisibilityType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.visibility);
+
+        }
+
+        [Test()]
+        public void SpeedValue()
+        {
+            Assert.AreNotEqual(null, WeatherLatest.weatherLatestDTO.LatestWeatherRoot.wind.speed);
+        }
+
+
+
+
+
+        [Test()]
+        public void SpeedType()
+        {
+            Assert.IsInstanceOf<double>(WeatherLatest.weatherLatestDTO.LatestWeatherRoot.wind.speed);
 
         }
 
