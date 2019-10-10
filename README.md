@@ -8,17 +8,19 @@ A project to improve my skills in testing and to practice. The aim was to write 
 
 
 # Classes:
-
-
-# LatestWeatherModel
 WeatherLatestDTO- Contains a method for deserializing Json Object. Deserialization is used to read the data and to construct the object again
 WeatherLatestCallManager-
 WeatherLatestSystem
 
+# LatestWeatherModel
 
-# Technology/Framework Used: .NET Framework
 
-# Technology Used : C#, NUnit, Json, RestSharp.
+
+# Technology/Framework Used: 
+.NET Framework
+
+# Technology Used : 
+C#, NUnit, Json, RestSharp.
 
 # Features:
 This project will help test the Open Weather application to help find defects
