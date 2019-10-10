@@ -13,6 +13,7 @@ namespace OpenWeather.Weather_Latest.Data_Handling
         public void DeserializeLatestWeather(String LatestWeatherResponse)
         {
             LatestWeatherRoot = JsonConvert.DeserializeObject<LatestWeatherRoot>(LatestWeatherResponse);
+            
         }
     }
 
