@@ -3,7 +3,7 @@ Project Title:
  Project-Weather-API Testing
 
 
-Motivation:
+# Motivation:
 A project to improve my skills in testing and to practice. The aim was to write and run ob test the content returned by the OpenWeather API and to see the many ways of testing.
 
 
