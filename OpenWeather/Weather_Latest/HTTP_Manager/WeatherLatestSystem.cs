@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using OpenWeather.Weather_Latest.Data_Handling;
-
+using RestSharp;
 
 namespace OpenWeather.Weather_Latest.HTTP_Manager
 {
-   public class WeatherLatestSystem
+    public class WeatherLatestSystem
     {
         public WeatherLatestDTO weatherLatestDTO = new WeatherLatestDTO();
 
@@ -19,6 +19,11 @@ namespace OpenWeather.Weather_Latest.HTTP_Manager
         public WeatherLatestSystem()
         {
             weatherLatestDTO.DeserializeLatestWeather(callManager.GetLatestWeather());
+
+        }
+        public string GetHeaders()
+        {
+            return callManager.StatusCode;
         }
     }
 }

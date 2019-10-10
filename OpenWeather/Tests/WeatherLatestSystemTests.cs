@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenWeather.Weather_Latest.HTTP_Manager;
+using RestSharp;
 
 namespace OpenWeather.Tests
 {
     public class WeatherLatestSystemTests
     {
         private WeatherLatestSystem WeatherLatest = new WeatherLatestSystem();
-        public WeatherLatestCallManager CM = new WeatherLatestCallManager();
-
+        
         [Test()]
         public void LonDataType()
         {
@@ -225,8 +225,10 @@ namespace OpenWeather.Tests
         [Test()]
         public void ContentTypeTest()
         {
-            CM.GetLatestWeather();
-            Assert.That(CM.iresponse.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            
+            
+           
+            Assert.That(WeatherLatest.GetHeaders(), Is.EqualTo("OK"));
         }
 
     }

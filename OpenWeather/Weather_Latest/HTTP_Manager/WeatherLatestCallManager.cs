@@ -10,6 +10,8 @@ namespace OpenWeather.Weather_Latest.HTTP_Manager
 {
    public class WeatherLatestCallManager
     {
+        public string StatusCode { get; set; }
+        
         readonly IRestClient restClient;
         public IRestResponse iresponse;
         public WeatherLatestCallManager()
@@ -22,8 +24,8 @@ namespace OpenWeather.Weather_Latest.HTTP_Manager
             var request = new RestRequest(WeatherConfig.ApiUrlMod + "&" + WeatherConfig.ApiKey);
             var response = restClient.Execute(request, Method.GET);
             iresponse = response;
+            StatusCode = response.StatusCode.ToString();
             return response.Content;
-
         }
     }
 }
